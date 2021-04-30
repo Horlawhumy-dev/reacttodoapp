@@ -7,7 +7,6 @@ const Header = () => {
     return (
        <WithClass classes="header">
             <Logo />
-            <Toolbar />
        </WithClass>
     )
 }

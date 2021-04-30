@@ -1,11 +1,11 @@
 import React from 'react'
-import WithClass from '../../../hoc/WithClass/WithClass'
+import Wrap from '../../../hoc/Wrap/Wrap'
 
 const Logo = () => {
     return (
-       <WithClass classes="logo">
-            <h1>ReactTodo</h1>
-       </WithClass>
+        <Wrap>
+            <h1>DjangoReact Todo App</h1>
+        </Wrap>
     )
 }
 
