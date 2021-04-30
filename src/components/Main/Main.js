@@ -3,11 +3,11 @@ import React from 'react'
 import WithClass from '../../hoc/WithClass/WithClass'
 import TodoContainer from './TodoContainer/TodoContainer'
 
-const Main = () => {
+const Main = (props) => {
     return (
         <main>
             <WithClass classes="Main">
-                <TodoContainer />
+                {props.children}
             </WithClass>
         </main>
     )

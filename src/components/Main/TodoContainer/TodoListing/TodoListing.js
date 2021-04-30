@@ -1,9 +1,13 @@
 import React from 'react'
+import WithClass from '../../../../hoc/WithClass/WithClass'
 
-export const TodoListing = () => {
+
+const TodoListing = (props) => {
     return (
-        <div>
-            
-        </div>
+        <WithClass classes="TodoListing">
+            {props.children}
+        </WithClass>
     )
 }
+
+export default TodoListing;
