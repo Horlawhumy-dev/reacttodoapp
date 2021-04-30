@@ -1,12 +1,23 @@
+import React, { Component} from 'react';
+import Header from './components/Header/Header'
+import WithClass from './hoc/WithClass/WithClass'
 
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-     <div>Django React Todo By Haroffcode</div>
-    </div>
-  );
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+  }
+
+  render() {
+    return(
+      <WithClass classes="App">
+        <Header />
+      </WithClass>
+    )
+  }
 }
 
 export default App;
