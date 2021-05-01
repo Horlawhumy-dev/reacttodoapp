@@ -34,7 +34,7 @@ code {
 .Container{
   width: 60%;
   background-color: bisque;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.705);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.705);
   border-radius: 5px;
   padding: 10px 5px;
   margin: 10px auto;
@@ -67,7 +67,7 @@ code {
 }
 
 .TodoForm button{
-  background: rgb(255, 140, 0);
+  background: rgb(255, 140, 0, 0.8);
   color: black;
   font-size: larger;
   font-weight: 700;
@@ -79,6 +79,9 @@ code {
   cursor: pointer;
 }
 
+.TodoForm button:focus{
+  background: rgb(255, 140, 0);
+}
 .TodoListing{
   margin-top: 30px;
   width: 100%;
@@ -90,7 +93,11 @@ code {
   justify-content: space-between;
   margin: 10px 0;
   color: black;
-  background-color: rgba(255, 140, 0, 0.5);
+  background-color: rgba(255, 140, 0, 0.3);
+}
+
+.Todo:hover{
+  background-color: rgba(255, 140, 0, 0.6);
 }
 
 .Todo p{
@@ -104,11 +111,22 @@ code {
   outline: none;
   cursor: pointer;
   margin: 10px;
+  padding: 10px;
 }
 
-.Todo button i{
+.Todo button .fa:hover{
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.Todo button .fa-times{
   font-size: 20px;
   color: red;
+}
+
+.Todo button .fa-edit{
+  font-size: 20px;
+  color: black;
 }
 
 .Footer{
@@ -128,8 +146,7 @@ code {
 }
 
 .Footer div p{
- 
-  color: black;
+  color: red;
   font-size: larger;
   text-align: center;
 }
@@ -141,3 +158,26 @@ code {
   }
 }
 
+@media (max-width:400px){
+  .header{
+    height: 50px;
+  }
+  .header h1{
+    font-size: medium;
+    display: block;
+
+  }
+
+  .Todo{
+    flex-direction: column;
+  }
+
+  .Footer h1{
+    font-size: medium;
+  }
+
+  .Footer p, span{
+    font-size: medium;
+    width: 100%;
+  }
+}
